@@ -1,5 +1,12 @@
 [package]
 name = "atomcad"
+version = { workspace = true }
+publish = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[workspace.package]
 version = "0.1.0"
 publish = false
 authors = ["Machine Phase Systems <hello@machinephase.systems>"]
@@ -8,6 +15,9 @@ edition = "2021"
 
 [workspace.dependencies]
 bevy = { version = "0.14" }
+common = { package = "atomcad-common", path = "crates/common" }
+serde = { version =  "1.0" }
+ultraviolet = { version = "0.9" }
 
 # Enable a small amount of optimization for our code in debug mode:
 [profile.dev]
@@ -21,6 +31,7 @@ opt-level = 3
 bevy = { workspace = true }
 bevy_asset_loader = { version = "0.21" }
 bitflags = "2"
+common = { workspace = true }
 
 # keep the following in sync with Bevy's dependencies
 winit = { version = "0.30", default-features = false }
