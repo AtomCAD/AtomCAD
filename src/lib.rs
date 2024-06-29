@@ -5,6 +5,9 @@
 // There's just no getting around this, so silence clippy's complaints.
 #![allow(clippy::type_complexity)]
 
+pub mod platform;
+pub(crate) mod platform_impl;
+
 use bevy::app::App;
 use bevy::prelude::*;
 
