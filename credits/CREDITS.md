@@ -9,3 +9,4 @@ to facilitate the process of upstreaming bug fixes:
 ## Assets
 
 * Bevy icon: [MIT License](licenses/LICENSE-MIT);
+* Fira Sans font: [Open Font License](licenses/LICENSE-OFL.md);

@@ -8,10 +8,14 @@
 pub mod platform;
 pub(crate) mod platform_impl;
 
+pub mod assets;
+use assets::FontAssets;
+
 pub mod gui;
 use gui::set_window_icon;
 
 pub mod state;
+use state::cadview::CadViewPlugin;
 use state::loading::LoadingPlugin;
 
 use bevy::app::App;
@@ -27,6 +31,9 @@ enum AppState {
     // During the loading State the LoadingPlugin will load our assets
     #[default]
     Loading,
+    // During this State the scene graph is rendered and the user can interact
+    // with the camera.
+    CadView,
 }
 
 pub struct AppPlugin;
@@ -34,7 +41,7 @@ pub struct AppPlugin;
 impl Plugin for AppPlugin {
     fn build(&self, app: &mut App) {
         app.init_state::<AppState>()
-            .add_plugins(LoadingPlugin)
+            .add_plugins((LoadingPlugin, CadViewPlugin))
             .add_systems(Startup, set_window_icon);
     }
 }

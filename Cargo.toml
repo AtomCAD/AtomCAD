@@ -19,6 +19,7 @@ opt-level = 3
 
 [dependencies]
 bevy = { workspace = true }
+bevy_asset_loader = { version = "0.21" }
 
 # keep the following in sync with Bevy's dependencies
 winit = { version = "0.30", default-features = false }
