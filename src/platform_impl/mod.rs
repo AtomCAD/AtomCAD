@@ -7,7 +7,6 @@
     target_os = "windows",
     target_os = "android",
     target_os = "ios",
-    target_family = "wasm"
 ))]
 mod defaults;
 #[cfg(any(
@@ -16,8 +15,12 @@ mod defaults;
     target_os = "windows",
     target_os = "android",
     target_os = "ios",
-    target_family = "wasm"
 ))]
 pub(crate) use defaults::*;
+
+#[cfg(target_family = "wasm")]
+mod web;
+#[cfg(target_family = "wasm")]
+pub(crate) use web::*;
 
 // End of File
