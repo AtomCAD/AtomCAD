@@ -282,8 +282,10 @@ version = "0.1.0"
 dependencies = [
  "bevy",
  "bevy_asset_loader",
+ "bitflags 2.6.0",
  "embed-resource",
  "image",
+ "objc",
  "wasm-bindgen-test",
  "web-sys",
  "winit",

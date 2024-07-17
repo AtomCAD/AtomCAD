@@ -13,4 +13,16 @@ pub mod bevy {
     }
 }
 
+pub mod menubar {
+    use crate::menu;
+    use bevy::winit::WinitWindows;
+
+    // Currently does nothing, and is present merely to ensure we compile on
+    // platforms, including those that don't natively support any menubar
+    // functionality.
+    pub fn attach_menu(windows: &WinitWindows, blueprint: &menu::Blueprint) {
+        crate::platform_impl::menubar::attach_menu(windows, blueprint)
+    }
+}
+
 // End of File

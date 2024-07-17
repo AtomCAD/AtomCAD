@@ -79,4 +79,6 @@ fn update_canvas_size(
     })();
 }
 
+pub(crate) use super::defaults::menubar;
+
 // End of File
