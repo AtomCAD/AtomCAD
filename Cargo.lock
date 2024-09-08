@@ -192,6 +192,7 @@ dependencies = [
  "atomcad-window",
  "atomcad-winit-runner",
  "log",
+ "objc2-foundation",
  "wasm-bindgen",
  "wasm-bindgen-test",
  "winit",
